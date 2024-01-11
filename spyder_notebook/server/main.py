@@ -1,7 +1,7 @@
 # Copyright (c) Jupyter Development Team, Spyder Project Contributors.
 # Distributed under the terms of the Modified BSD License.
 
-"""Entry point for server rendering notebooks for Spyder."""
+"""Server rendering entry point for Spyder notebooks."""
 
 import os
 from notebook.app import (
@@ -11,7 +11,7 @@ from traitlets import default, Bool, Unicode
 
 HERE = os.path.dirname(__file__)
 
-aliases['info-file'] = 'SpyderNotebookApp.info_file_cmdline'
+
 
 flags['dark'] = (
     {'SpyderNotebookApp': {'dark_theme': True}},
@@ -19,7 +19,7 @@ flags['dark'] = (
 )
 
 
-class SpyderNotebookHandler(NotebookBaseHandler):
+class SpyderNotebookHandler:
     """A notebook page handler for Spyder."""
 
     def get_page_config(self):
